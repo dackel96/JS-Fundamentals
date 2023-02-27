@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////
-/*Ages*/
+/*01.Ages*/
 //////////////////////////////////////////////////////
 function personDefinition(age) {
   let result;
@@ -21,7 +21,7 @@ function personDefinition(age) {
   console.log(result);
 }
 //////////////////////////////////////////////////////
-/*Vacation*/
+/*02.Vacation*/
 //////////////////////////////////////////////////////
 function vacationPriceCalculator(groupOfPeople, groupType, dayOfWeek) {
   let totalPrice;
@@ -71,7 +71,7 @@ function vacationPriceCalculator(groupOfPeople, groupType, dayOfWeek) {
   }
 }
 //////////////////////////////////////////////////////
-/*Leap Year*/
+/*03.Leap Year*/
 //////////////////////////////////////////////////////
 function leapYearCheck(year) {
   let result = 'no';
@@ -83,7 +83,7 @@ function leapYearCheck(year) {
   console.log(result);
 }
 //////////////////////////////////////////////////////
-/*Print and Sum*/
+/*04.Print and Sum*/
 //////////////////////////////////////////////////////
 function arraySum(from, to) {
   let array = [];
@@ -104,5 +104,51 @@ function arraySum(from, to) {
   console.log(result);
 }
 //////////////////////////////////////////////////////
-/*Multiplication Table*/
+/*05.Multiplication Table*/
 //////////////////////////////////////////////////////
+function multiplication(number) {
+  if (number <= 0 || number > 100) {
+    console.log('Error!');
+  }
+
+  let result;
+
+  for (let i = 1; i <= 10; i++) {
+    console.log(`${number} X ${i} = ${number * i}`);
+  }
+}
+//////////////////////////////////////////////////////
+/*06.Sum Digits*/
+//////////////////////////////////////////////////////
+function digitsSum(number) {
+  let sum = 0;
+
+  while (number > 0) {
+    let step = number % 10;
+    sum += step;
+    number = Math.trunc(number / 10);
+  }
+
+  console.log(sum);
+}
+//////////////////////////////////////////////////////
+/*07.Chars to String*/
+//////////////////////////////////////////////////////
+function makeWordFromChars(letterOne, letterTwo, letterThree) {
+  let word = `${letterOne}${letterTwo}${letterThree}`;
+  console.log(word);
+}
+//////////////////////////////////////////////////////
+/*08.Reversed Chars*/
+//////////////////////////////////////////////////////
+function reverseWord(letterOne, letterTwo, letterThree) {
+  let word = [letterOne, letterTwo, letterThree];
+  let result = word.reverse();
+  console.log(result.join(' '));
+}
+//////////////////////////////////////////////////////
+/*09.Fruit*/
+//////////////////////////////////////////////////////
+function billCalculator(fruit, grams, pricePerKilo) {
+  let kilos = Math.floor(grams / 100);
+}
