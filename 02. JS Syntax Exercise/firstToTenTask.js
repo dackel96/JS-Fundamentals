@@ -150,5 +150,34 @@ function reverseWord(letterOne, letterTwo, letterThree) {
 /*09.Fruit*/
 //////////////////////////////////////////////////////
 function billCalculator(fruit, grams, pricePerKilo) {
-  let kilos = Math.floor(grams / 100);
+  let kilos = grams / 1000;
+
+  let totalPrice = kilos * pricePerKilo;
+
+  let result = `I need \$${totalPrice.toFixed(2)} to buy ${kilos.toFixed(
+    2
+  )} kilograms ${fruit}.`;
+
+  console.log(result);
+}
+//////////////////////////////////////////////////////
+/*10.Same Numbers*/
+//////////////////////////////////////////////////////
+function valueChecker(number) {
+  let sum = 0;
+
+  let firstDigit = number % 10;
+
+  let checker = true;
+
+  while (number > 0) {
+    let step = number % 10;
+    sum += step;
+    number = Math.trunc(number / 10);
+    if (step !== firstDigit) {
+      checker = false;
+    }
+  }
+
+  console.log(`${checker}\n${sum}`);
 }
