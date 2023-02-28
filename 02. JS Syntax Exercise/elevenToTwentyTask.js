@@ -105,5 +105,60 @@ function speedRadar(speed, area) {
 
   console.log(result);
 }
+//////////////////////////////////////////////////////
+/*12.Cooking by Numbers*/
+//////////////////////////////////////////////////////
+function cookNumbers(numberAsString, ...operations) {
+  let number = Number(numberAsString);
 
-speedRadar(21, 'residential');
+  operations.forEach((operation) => {
+    switch (operation) {
+      case 'chop':
+        number /= 2;
+        break;
+      case 'dice':
+        number = Math.sqrt(number);
+        break;
+      case 'spice':
+        number++;
+        break;
+      case 'bake':
+        number *= 3;
+        break;
+      case 'fillet':
+        number -= number * 0.2;
+        break;
+    }
+    console.log(number);
+  });
+}
+//////////////////////////////////////////////////////
+/*13.Array Rotation*/
+//////////////////////////////////////////////////////
+function arrayRotator(numbers, cycles) {
+  cycles %= numbers.length;
+
+  for (let i = 0; i < cycles; i++) {
+    let firstNumber = numbers.shift();
+    numbers.push(firstNumber);
+  }
+
+  let result = numbers.join(' ');
+
+  console.log(result);
+}
+//////////////////////////////////////////////////////
+/*14.Print Every N-th Element from an Array*/
+//////////////////////////////////////////////////////
+function printNthElement(array, step) {
+  let newArray = [];
+
+  for (let i = 0; i < array.length; i += step) {
+    newArray.push(array[i]);
+  }
+
+  return newArray;
+}
+//////////////////////////////////////////////////////
+/*15.List of Names*/
+//////////////////////////////////////////////////////
