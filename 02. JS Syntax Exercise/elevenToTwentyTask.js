@@ -162,3 +162,16 @@ function printNthElement(array, step) {
 //////////////////////////////////////////////////////
 /*15.List of Names*/
 //////////////////////////////////////////////////////
+function namesInOrder(names) {
+  let sortStringAsc = [...names].sort((a, b) => {
+    let result = a.localeCompare(b);
+    return result;
+  });
+  let counter = 1;
+  sortStringAsc.forEach((name) => {
+    console.log(`${counter}.${name}`);
+    counter++;
+  });
+}
+
+namesInOrder(['John', 'Bob', 'Christina', 'Ema']);
