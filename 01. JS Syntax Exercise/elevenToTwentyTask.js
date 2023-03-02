@@ -173,5 +173,89 @@ function namesInOrder(names) {
     counter++;
   });
 }
+//////////////////////////////////////////////////////
+/*16.Sorting Numbers*/
+//////////////////////////////////////////////////////
+function sortNumbers(numbers) {
+  let sortArray = [...numbers.sort((a, b) => a - b)];
 
-namesInOrder(['John', 'Bob', 'Christina', 'Ema']);
+  let resultArray = [];
+
+  let dribbler = true;
+
+  for (let i of numbers) {
+    let temp = dribbler ? sortArray.shift() : sortArray.pop();
+
+    resultArray.push(temp);
+
+    dribbler = !dribbler;
+  }
+  return resultArray;
+}
+//////////////////////////////////////////////////////
+/*17.Reveal Words*/
+//////////////////////////////////////////////////////
+function wordsReveal(words, sentence) {
+  for (const word of words.split(', ')) {
+    for (const missing of sentence.split(' ')) {
+      if (
+        missing === '*'.repeat(missing.length) &&
+        word.length === missing.length
+      ) {
+        sentence = sentence.replace(missing, word);
+      }
+    }
+  }
+  console.log(sentence);
+}
+//////////////////////////////////////////////////////
+/*18.Modern Times of #(HashTag)*/
+//////////////////////////////////////////////////////
+function wordFinder(sentence) {
+  let resultArray = [];
+
+  for (let word of sentence.split(' ')) {
+    if (word.startsWith('#') && word.length > 1) {
+      word = word.substring(1);
+
+      if (/^[a-zA-Z]+$/.test(word)) {
+        resultArray.push(word);
+      }
+    }
+  }
+
+  let result = resultArray.join('\n');
+
+  console.log(result);
+}
+//////////////////////////////////////////////////////
+/*19.String Substring*/
+//////////////////////////////////////////////////////
+function wordMatcher(word, sentence) {
+  for (const sentenceWord of sentence.split(' ')) {
+    if (sentenceWord.toLowerCase() === word.toLowerCase()) {
+      console.log(word);
+      return;
+    }
+  }
+  console.log(`${word} not found!`);
+}
+//////////////////////////////////////////////////////
+/*20.Pascal-Case Splitter*/
+//////////////////////////////////////////////////////
+function stringSplitter(sentence) {
+  let result = '';
+
+  for (const character of sentence) {
+    let characterCode = character.charCodeAt(character);
+    if (characterCode >= 65 && characterCode <= 90) {
+      if (result.length > 0) {
+        result += ', ';
+      }
+      result += character;
+    } else {
+      result += character;
+    }
+  }
+  console.log(result);
+}
