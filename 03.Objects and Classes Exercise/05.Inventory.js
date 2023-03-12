@@ -19,9 +19,3 @@ function heroLog(input) {
     console.log(`Hero: ${name}\nlevel => ${level}\nitems => ${inventory}`);
   }
 }
-
-heroLog([
-  'Isacc / 25 / Apple, GravityGun',
-  'Derek / 12 / BarrelVest, DestructionSword',
-  'Hes / 1 / Desolator, Sentinel, Antara',
-]);
