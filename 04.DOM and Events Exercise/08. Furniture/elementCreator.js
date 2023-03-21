@@ -3,7 +3,7 @@
 function createElement(type, content, id, parentNode, classes, attributes) {
   //създаваме елемента с подадения [type]
   const newElement = document.createElement(type);
-  //проверяваме дали [type] е [input] или е различен елемент понеже при инпут задването на информацията в него трябва да бъде през пропърти [value].
+  //проверяваме дали [type] е [input] или е различен елемент понеже при инпут задaването на информацията в него трябва да бъде през пропърти [value].
   if (content && type !== 'input') {
     newElement.textContent = content;
   }
@@ -29,4 +29,6 @@ function createElement(type, content, id, parentNode, classes, attributes) {
       newElement.setAttribute(key, attributes[key]);
     }
   }
+
+  return newElement;
 }
