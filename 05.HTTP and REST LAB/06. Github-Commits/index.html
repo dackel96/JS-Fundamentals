@@ -7,15 +7,18 @@
   </head>
 
   <body id="bdy">
-    <label for="username">GitHub username:</label>
-    <input type="text" id="username" value="" />
-    <button onclick="loadRepos()">Load Repos</button>
-    <ul id="repos"></ul>
-    <br />
-    <label for="repo">Repo:</label>
-    <input type="text" id="repo" value="" />
-    <button onclick="loadCommits()">Load Commits</button>
-    <ul id="commits"></ul>
+    <div class="repos">
+      <label for="username">GitHub username:</label>
+      <input type="text" id="username" value="" />
+      <button onclick="loadRepos()">Load Repos</button>
+      <ul id="repos"></ul>
+    </div>
+    <div class="commits">
+      <label for="repo">Repo:</label>
+      <input type="text" id="repo" value="" />
+      <button onclick="loadCommits()">Load Commits</button>
+      <ul id="commits"></ul>
+    </div>
     <script src="./app.js"></script>
   </body>
 </html>

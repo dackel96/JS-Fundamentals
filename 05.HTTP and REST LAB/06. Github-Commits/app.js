@@ -84,6 +84,7 @@ function loadRepos() {
     });
 
   function inputClear() {
+    input.textContent = '';
     listResult.remove();
   }
 }
